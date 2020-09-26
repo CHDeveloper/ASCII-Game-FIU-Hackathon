@@ -2,18 +2,19 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include <string>
 
 
-using LevelTile = std::vector<std::vector<char>>;
+using LevelTile = std::vector<std::string>;
 
 class Level
 {
 public:
 	Level();
-	~Level();
-	void init(std::ifstream inFile);
+	void init(std::ifstream& inFile);
+	void showLevel();
 	
 private:
-	LevelTile level;
+	LevelTile _level;
 };
 
