@@ -1,7 +1,5 @@
 #include "Level.h"
-Level::Level() {
 
-}
 
 // passing player by reference to initialize player position in level
 void Level::init(std::ifstream& inFile, Player& player) {
@@ -26,48 +24,14 @@ void Level::showLevel() {
 }
 
 void Level::movePlayer(char input, Player& player) {
-	switch (input) {
-	case 'w':
-	case 'W':
-		if (_level[player.getY() - 1][player.getX()] == '#') break;
-		else {
-			_level[player.getY()][player.getX()] == '.';
-			_level[player.getY() - 1][player.getX()] == '@';
-			player.setPos(player.getX(), player.getY() - 1);
-			break;
-		}
-	case 'a':
-	case 'A':
-		if (_level[player.getY()][player.getX()-1] == '#') break;
-		else {
-			player.setPos(player.getX() - 1, player.getY());
-			_level[player.getY()][player.getX()] == '.';
-			_level[player.getY()][player.getX()-1] == '@';
-			
-			break;
-		}
-		break;
+	
+	
+}
 
-	case 'd':
-	case 'D':
-		if (_level[player.getY() - 1][player.getX()] == '#') break;
-		else {
-			_level[player.getY()][player.getX()] == '.';
-			_level[player.getY()][player.getX()+1] == '@';
-			player.setPos(player.getX() + 1, player.getY());
-			break;
-		}
-		break;
+char Level::getTile(int x, int y) {
+	return _level[y][x];
+}
 
-	case 's':
-	case 'S':
-		if (_level[player.getY() - 1][player.getX()] == '#') break;
-		else {
-			_level[player.getY()][player.getX()] == '.';
-			_level[player.getY() + 1][player.getX()] == '@';
-			player.setPos(player.getX(), player.getY() + 1);
-			break;
-		}
-		break;
-	}
+void Level::setTile(int x, int y, char tile) {
+	_level[y][x] == tile;
 }
