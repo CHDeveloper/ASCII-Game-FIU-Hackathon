@@ -5,6 +5,7 @@
 #include <string>
 
 #include "Player.h"
+#include "Door.h"
 
 using LevelTile = std::vector<std::string>;
 
@@ -24,5 +25,6 @@ public:
 	
 private:
 	LevelTile _level;
+	std::vector<Door> _doors;
 };
 
