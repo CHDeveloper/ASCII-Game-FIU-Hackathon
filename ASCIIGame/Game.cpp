@@ -14,7 +14,7 @@ void Game::play() {
 	}
 	_level.init(levelFile, player);
 	
-	/*while (true) {
+	while (true) {
 		std::cout << std::string(100, '\n');
 		_level.showLevel();
 		char input;
@@ -22,5 +22,5 @@ void Game::play() {
 		input = _getch();
 		_level.movePlayer(input, player);
 
-	}*/
+	}
 }

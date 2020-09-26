@@ -24,7 +24,41 @@ void Level::showLevel() {
 }
 
 void Level::movePlayer(char input, Player& player) {
-	
+	switch (input) {
+	case 'W':
+	case 'w':
+		if (getTile(player.getX(), player.getY() - 1) != '#') { 
+			setTile(player.getX(), player.getY(), '.');
+			setTile(player.getX(), player.getY() - 1, '@');
+			player.setPos(player.getX(), player.getY() - 1);
+		}
+		break;
+	case 'A':
+	case 'a':
+		if (getTile(player.getX()-1, player.getY()) != '#') {
+			setTile(player.getX(), player.getY(), '.');
+			setTile(player.getX()-1, player.getY(), '@');
+			player.setPos(player.getX()-1, player.getY());
+		}
+		break;
+	case 'S':
+	case 's':
+		if (getTile(player.getX(), player.getY()+1) != '#') {
+			setTile(player.getX(), player.getY(), '.');
+			setTile(player.getX(), player.getY()+1, '@');
+			player.setPos(player.getX(), player.getY()+1);
+		}
+		break;
+
+	case 'D':
+	case 'd':
+		if (getTile(player.getX()+1, player.getY()) != '#') {
+			setTile(player.getX(), player.getY(), '.');
+			setTile(player.getX()+1, player.getY(), '@');
+			player.setPos(player.getX()+1, player.getY());
+		}
+		break;
+	}
 	
 }
 
