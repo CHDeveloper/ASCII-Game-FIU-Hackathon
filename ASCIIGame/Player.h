@@ -25,7 +25,7 @@ public:
 	void setCurrentLevel(int newLevel);
 	void setDexterity(int newDexterity);
 	void setAttackDamage(int newAttackDmg);
-	void setFatigued(bool changeFatigued)
+	void setFatigued(bool changeFatigued);
 
 private:
 	int _xPos;
