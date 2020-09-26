@@ -12,5 +12,6 @@ private:
 
 public:
 	void play();
+	int getCurrentPlayerLevel();
 };
 
