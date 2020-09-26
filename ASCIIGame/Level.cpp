@@ -29,24 +29,24 @@ void Level::movePlayer(char input, Player& player) {
 	case 'w':
 		if (getTile(player.getX(), player.getY() - 1) != '#') { 
 			setTile(player.getX(), player.getY(), '.');
-			setTile(player.getX(), player.getY() - 1, '@');
 			player.setPos(player.getX(), player.getY() - 1);
+			setTile(player.getX(), player.getY(), '@');
 		}
 		break;
 	case 'A':
 	case 'a':
 		if (getTile(player.getX()-1, player.getY()) != '#') {
 			setTile(player.getX(), player.getY(), '.');
-			setTile(player.getX()-1, player.getY(), '@');
-			player.setPos(player.getX()-1, player.getY());
+			player.setPos(player.getX() - 1, player.getY());
+			setTile(player.getX(), player.getY(), '@');
 		}
 		break;
 	case 'S':
 	case 's':
 		if (getTile(player.getX(), player.getY()+1) != '#') {
 			setTile(player.getX(), player.getY(), '.');
-			setTile(player.getX(), player.getY()+1, '@');
 			player.setPos(player.getX(), player.getY()+1);
+			setTile(player.getX(), player.getY(), '@');
 		}
 		break;
 
@@ -54,8 +54,8 @@ void Level::movePlayer(char input, Player& player) {
 	case 'd':
 		if (getTile(player.getX()+1, player.getY()) != '#') {
 			setTile(player.getX(), player.getY(), '.');
-			setTile(player.getX()+1, player.getY(), '@');
-			player.setPos(player.getX()+1, player.getY());
+			player.setPos(player.getX() + 1, player.getY());
+			setTile(player.getX(), player.getY(), '@');
 		}
 		break;
 	}
