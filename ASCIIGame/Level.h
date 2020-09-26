@@ -8,6 +8,11 @@
 
 using LevelTile = std::vector<std::string>;
 
+enum class levelUpdate {
+	enteringNewLevel = 1,
+	
+};
+
 class Level
 {
 public:

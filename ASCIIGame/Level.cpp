@@ -27,7 +27,7 @@ void Level::movePlayer(char input, Player& player) {
 	switch (input) {
 	case 'W':
 	case 'w':
-		if (getTile(player.getX(), player.getY() - 1) != '#') { 
+		if (getTile(player.getX(), player.getY() - 1) == '.') { 
 			setTile(player.getX(), player.getY(), '.');
 			player.setPos(player.getX(), player.getY() - 1);
 			setTile(player.getX(), player.getY(), '@');
@@ -35,7 +35,7 @@ void Level::movePlayer(char input, Player& player) {
 		break;
 	case 'A':
 	case 'a':
-		if (getTile(player.getX()-1, player.getY()) != '#') {
+		if (getTile(player.getX()-1, player.getY()) == '.') {
 			setTile(player.getX(), player.getY(), '.');
 			player.setPos(player.getX() - 1, player.getY());
 			setTile(player.getX(), player.getY(), '@');
@@ -43,7 +43,7 @@ void Level::movePlayer(char input, Player& player) {
 		break;
 	case 'S':
 	case 's':
-		if (getTile(player.getX(), player.getY()+1) != '#') {
+		if (getTile(player.getX(), player.getY()+1) == '.') {
 			setTile(player.getX(), player.getY(), '.');
 			player.setPos(player.getX(), player.getY()+1);
 			setTile(player.getX(), player.getY(), '@');
@@ -52,7 +52,7 @@ void Level::movePlayer(char input, Player& player) {
 
 	case 'D':
 	case 'd':
-		if (getTile(player.getX()+1, player.getY()) != '#') {
+		if (getTile(player.getX()+1, player.getY()) == '.') {
 			setTile(player.getX(), player.getY(), '.');
 			player.setPos(player.getX() + 1, player.getY());
 			setTile(player.getX(), player.getY(), '@');
