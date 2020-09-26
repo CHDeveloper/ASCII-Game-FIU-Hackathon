@@ -11,10 +11,11 @@ using LevelTile = std::vector<std::string>;
 class Level
 {
 public:
-	Level();
 	void init(std::ifstream& inFile, Player& player);
 	void showLevel();
 	void movePlayer(char input, Player& player);
+	char getTile(int x, int y);
+	void setTile(int x, int y, char tile);
 	
 private:
 	LevelTile _level;
