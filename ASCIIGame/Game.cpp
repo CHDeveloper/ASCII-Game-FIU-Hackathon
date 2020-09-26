@@ -13,11 +13,14 @@ void Game::play() {
 		return;
 	}
 	_level.init(levelFile, player);
-	_level.showLevel();
+	
 	/*while (true) {
+		std::cout << std::string(100, '\n');
 		_level.showLevel();
 		char input;
+		std::cout << std::endl << player.getX() << " " << player.getY();
 		input = _getch();
 		_level.movePlayer(input, player);
+
 	}*/
 }

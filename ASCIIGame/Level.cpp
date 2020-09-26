@@ -11,8 +11,10 @@ void Level::init(std::ifstream& inFile, Player& player) {
 		_level.push_back(input);
 	}
 	for(int i = 0; i < _level.size(); i++) {
-		for (int j = 0; i < _level[i].length(); j++) {
-			player.setPos(j, i);
+		for(int j = 0; j < _level[i].size(); j++) {
+			if (_level[i][j] == '@') {
+				player.setPos(j, i);
+			}
 		}
 	}
 }
@@ -38,9 +40,10 @@ void Level::movePlayer(char input, Player& player) {
 	case 'A':
 		if (_level[player.getY()][player.getX()-1] == '#') break;
 		else {
+			player.setPos(player.getX() - 1, player.getY());
 			_level[player.getY()][player.getX()] == '.';
 			_level[player.getY()][player.getX()-1] == '@';
-			player.setPos(player.getX() - 1, player.getY());
+			
 			break;
 		}
 		break;
