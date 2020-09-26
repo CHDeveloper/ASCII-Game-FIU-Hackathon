@@ -67,5 +67,5 @@ char Level::getTile(int x, int y) {
 }
 
 void Level::setTile(int x, int y, char tile) {
-	_level[y][x] == tile;
+	_level[y][x] = tile;
 }
