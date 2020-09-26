@@ -4,17 +4,6 @@
 // passing player by reference to initialize player position in level
 void Level::init(std::ifstream& inFile, Player& player) {
 	std::string input;
-	inFile >> input;
-	while (input != "end") {
-		if (input == "Doors") continue;
-		int doorId;
-		std::string nextLevel;
-		int x;
-		int y;
-		inFile >> doorId >> nextLevel >> x >> y >> input;
-		_doors.push_back(Door(x, y, nextLevel, doorId));
-	}
-
 	// add lines to vector until EOF
 	while (getline(inFile, input)) {
 		_level.push_back(input);
@@ -24,12 +13,11 @@ void Level::init(std::ifstream& inFile, Player& player) {
 			if (_level[i][j] == '@') {
 				player.setPos(j, i);
 			}
-			else if (_level[i][j] >= '0' && _level[i][j] <= '9') {
-				_level[i][j] = ' ';
-			}
 		}
 	}
 }
+
+
 
 void Level::showLevel() {
 	for (std::string s : _level) {

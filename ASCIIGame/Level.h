@@ -11,7 +11,6 @@ using LevelTile = std::vector<std::string>;
 
 enum class levelUpdate {
 	enteringNewLevel = 1,
-	
 };
 
 class Level
@@ -22,9 +21,8 @@ public:
 	void movePlayer(char input, Player& player);
 	char getTile(int x, int y);
 	void setTile(int x, int y, char tile);
-	
+
 private:
 	LevelTile _level;
-	std::vector<Door> _doors;
 };
 
