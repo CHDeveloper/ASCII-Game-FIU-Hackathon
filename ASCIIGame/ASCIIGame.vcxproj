@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Container.cpp" />
     <ClCompile Include="Door.cpp" />
+    <ClCompile Include="Container.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Level.cpp" />
@@ -150,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="Container.h" />
     <ClInclude Include="Door.h" />
+    <ClInclude Include="Container.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Level.h" />
