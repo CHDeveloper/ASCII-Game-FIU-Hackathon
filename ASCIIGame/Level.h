@@ -6,6 +6,8 @@
 
 #include "Player.h"
 #include "Door.h"
+#include "Enemy.h"
+#include "Item.h"
 
 using LevelTile = std::vector<std::string>;
 
@@ -31,6 +33,11 @@ private:
 	LevelTile _level;
 	std::vector<Door> _doors;
 
+	// Enemy Variables
+	std::vector<Enemy> _enemyList;
+
+	// Item Variables
+	std::vector<Item> _itemList;
 
 	// Randomize level
 	char Enemy;
