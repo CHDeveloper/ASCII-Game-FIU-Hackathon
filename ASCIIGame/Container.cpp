@@ -3,7 +3,7 @@
 
 void Container::addItem(string itemName, int itemQuant) {
 	
-	unordered_map<string, int>::iterator it; // Iterator for the map
+	//unordered_map<string, int>::iterator it; // Iterator for the map
 
 	//it = _umap.find(itemName); // Try to find the item
 
@@ -42,5 +42,4 @@ void Container::removeItem(string itemName, int itemQuant) {
 
 unordered_map<string, int> Container::getContainer() {
 	return _umap;
-
 }

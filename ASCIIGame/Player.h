@@ -1,4 +1,5 @@
 #pragma once
+#include "Container.h"
 class Player
 {
 public:
@@ -17,6 +18,8 @@ public:
 	int getDexterity();
 	int getAttackDamage();
 	bool isFatigued();
+	Container getInventory();
+	
 
 	// Player Attribute Setters
 	void setHealth(int newHealth);
@@ -38,7 +41,9 @@ private:
 	int _dexterity; // Increases chance of hitting and chance of dodging
 	int _currLevel; // Appeneded to find the file
 	int _attackDmg; // Damage player deals to enemy
-	bool _isFatigued;
+	bool _isFatigued; // Check if the player's stamina is at 0
+	Container _inventory; // Inventory of the player
+
 	
 
 	// Disscuss implementation of
