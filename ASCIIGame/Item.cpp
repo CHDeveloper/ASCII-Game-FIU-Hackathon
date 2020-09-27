@@ -1,9 +1,5 @@
 #include "Item.h"
 
-unordered_map<string, int> Item::getItem() {
-	return _umap;
-}
-
 // Getters for the attributes
 int Item::getAttackDamage() {
 	return _attackDamage;
