@@ -12,7 +12,7 @@ To create a new level, you must first specify the doors of the level, and then d
 Doors are written like this:
 
 Doors
-<doorID> <Level-file> <x-coordinate-of-player> <y-coordinate-of-player> <connecting-door-in-adjacent-room> ,
+\<doorID\> \<Level-file\> \<x-coordinate-of-player\> \<y-coordinate-of-player\> \<connecting-door-in-adjacent-room\> ,
 .
 .
 .                                                                                                           end
