@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
+#include <vector>
+
+#include "Door.h"
 
 class Door
 {
@@ -14,6 +17,7 @@ private:
 	int _xPos;
 	int _yPos;
 	int _doorID;
+	int _connectingDoor;
 	std::string _nextLevel;
 };
 

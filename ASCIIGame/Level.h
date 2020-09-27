@@ -18,11 +18,13 @@ class Level
 public:
 	void init(std::ifstream& inFile, Player& player);
 	void showLevel();
-	void movePlayer(char input, Player& player);
+	char movePlayer(char input, Player& player);
 	char getTile(int x, int y);
 	void setTile(int x, int y, char tile);
+	Door getDoor(int index);
 
 private:
 	LevelTile _level;
+	std::vector<Door> _doors;
 };
 
