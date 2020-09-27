@@ -106,3 +106,12 @@ Door Level::getDoor(int index) {
 	return _doors[index];
 }
 
+
+// Randomize functions
+
+void Level::randomizeEnemy() {
+	return;
+}
+void Level::randomizeItem() {
+	return;
+}

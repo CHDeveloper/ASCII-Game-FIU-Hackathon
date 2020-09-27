@@ -23,8 +23,17 @@ public:
 	void setTile(int x, int y, char tile);
 	Door getDoor(int index);
 
+	// Randomize level
+	void randomizeEnemy();
+	void randomizeItem();
+	
 private:
 	LevelTile _level;
 	std::vector<Door> _doors;
+
+
+	// Randomize level
+	char Enemy;
+	char Item;
 };
 
