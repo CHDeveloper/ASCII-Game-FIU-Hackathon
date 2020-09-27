@@ -6,7 +6,6 @@ public:
 	void setPos(int x, int y);
 	int getX();
 	int getY();
-	void getPos(int& x, int& y);
 
 	
 

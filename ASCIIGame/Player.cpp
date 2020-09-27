@@ -12,10 +12,6 @@ int Player::getY() {
 	return _yPos;
 }
 
-void Player::getPos(int& x, int& y) {
-	x = _xPos;
-	y = _yPos;
-}
 
 // Player Attribute Getters
 int Player::getHealth() {
