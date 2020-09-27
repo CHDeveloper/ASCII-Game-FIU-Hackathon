@@ -1,9 +1,10 @@
 #include "Door.h"
-Door::Door(int x, int y, std::string nextLevel, int doorID) {
+Door::Door(int x, int y, std::string nextLevel, int doorID, int connectingDoor) {
 	_xPos = x;
 	_yPos = y;
 	_nextLevel = nextLevel;
 	_doorID = doorID;
+	_connectingDoor = connectingDoor;
 }
 
 int Door::getX() {
@@ -20,4 +21,8 @@ int Door::getDoorID() {
 
 std::string Door::getNextLevel() {
 	return _nextLevel;
+}
+
+int Door::getConnectingDoor() {
+	return _connectingDoor;
 }

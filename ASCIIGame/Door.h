@@ -7,11 +7,12 @@
 class Door
 {
 public:
-	Door(int x, int y, std::string nextLevel, int doorID);
+	Door(int x, int y, std::string nextLevel, int doorID, int connectingDoor);
 	int getX();
 	int getY();
 	int getDoorID();
 	std::string getNextLevel();
+	int getConnectingDoor();
 
 private:
 	int _xPos;

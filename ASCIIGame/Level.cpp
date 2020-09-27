@@ -2,7 +2,7 @@
 
 
 // passing player by reference to initialize player position in level
-void Level::init(std::ifstream& inFile, Player& player) {
+void Level::init(std::ifstream& inFile, Player& player, int enteringDoor) {
 	std::string input;
 	inFile >> input;
 	_doors.clear();
@@ -11,8 +11,9 @@ void Level::init(std::ifstream& inFile, Player& player) {
 		std::string nextLevel;
 		int x;
 		int y;
-		inFile >> doorId >> nextLevel >> x >> y >> input;
-		_doors.push_back(Door(x, y, nextLevel, doorId));
+		int connectingDoor;
+		inFile >> doorId >> nextLevel >> x >> y >> connectingDoor >> input;
+		_doors.push_back(Door(x, y, nextLevel, doorId, connectingDoor));
 	}
 	// remove all strings in levels and doors vector, if any
 	_level.clear();
@@ -20,13 +21,8 @@ void Level::init(std::ifstream& inFile, Player& player) {
 	while (getline(inFile, input)) {
 		_level.push_back(input);
 	}
-	for(int i = 0; i < _level.size(); i++) {
-		for(int j = 0; j < _level[i].size(); j++) {
-			if (_level[i][j] == '@') {
-				player.setPos(j, i);
-			}
-		}
-	}
+	setTile(_doors[enteringDoor].getX(), _doors[enteringDoor].getY(), '@');
+	player.setPos(_doors[enteringDoor].getX(), _doors[enteringDoor].getY());
 }
 
 
@@ -34,7 +30,15 @@ void Level::init(std::ifstream& inFile, Player& player) {
 void Level::showLevel() {
 	std::cout << std::string(100, '\n');
 	for (std::string s : _level) {
-		std::cout << s << "\n";
+		for (char c : s) {
+			if (c >= '0' && c <= '9') {
+				std::cout << ' ';
+			}
+			else {
+				std::cout << c;
+			}
+		}
+		std::cout << std::endl;
 	}
 }
 

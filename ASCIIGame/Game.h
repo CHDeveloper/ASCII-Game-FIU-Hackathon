@@ -15,7 +15,7 @@ private:
 
 public:
 	void play();
-	void initNewLevel(std::string levelName);
+	void initNewLevel(std::string levelName, int enteringDoor);
 	int getCurrentPlayerLevel();
 };
 

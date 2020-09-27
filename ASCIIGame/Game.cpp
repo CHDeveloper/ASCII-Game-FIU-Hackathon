@@ -2,7 +2,7 @@
 
 
 void Game::play() {
-	initNewLevel("Level1.txt");
+	initNewLevel("Level1.txt", 0);
 	
 	while (true) {
 		std::cout << std::string(100, '\n');
@@ -12,12 +12,12 @@ void Game::play() {
 		char result = _level.movePlayer(input, _player);
 		if (result >= '0' && result <= '9') {
 			Door door = _level.getDoor(result - '0');
-			initNewLevel(door.getNextLevel());
+			initNewLevel(door.getNextLevel(), door.getConnectingDoor());
 		}
 	}
 }
 
-void Game::initNewLevel(std::string levelName) {
+void Game::initNewLevel(std::string levelName, int enteringDoor) {
 	std::ifstream levelFile;
 	levelFile.open(levelName);
 
@@ -25,5 +25,5 @@ void Game::initNewLevel(std::string levelName) {
 		perror(levelName.c_str());
 		return;
 	}
-	_level.init(levelFile, _player);
+	_level.init(levelFile, _player, enteringDoor);
 }

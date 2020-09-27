@@ -16,7 +16,7 @@ enum class levelUpdate {
 class Level
 {
 public:
-	void init(std::ifstream& inFile, Player& player);
+	void init(std::ifstream& inFile, Player& player, int enteringDoor);
 	void showLevel();
 	char movePlayer(char input, Player& player);
 	char getTile(int x, int y);
