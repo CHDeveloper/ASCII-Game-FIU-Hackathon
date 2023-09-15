@@ -35,6 +35,7 @@ private:
 
 	// Enemy Variables
 	std::vector<Enemy> _enemyList;
+	Enemy _randomEnemy;
 
 	// Item Variables
 	std::vector<Item> _itemList;

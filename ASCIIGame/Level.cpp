@@ -114,7 +114,9 @@ void Level::randomizeEnemy() {
 	int randomHealth = rand() % 5 + 10; // Random value from 5 to 15
 	int randomAttackDamage = rand() % 1 + 5; // Random value from 1 to 6
 	int randomDexterity = rand() % 1 + 5; // Random value from 1 to 6
-
+	//Enemy randomEnemy(randomHealth, randomAttackDamage, randomDexterity);  
+	
+	/////////////::Enemy(randomHealth, randomAttackDamage, randomDexterity);
 	int v1 = rand() % 10 +10; // Random value from 10 to 20
 	int v2 = rand() % 10 + 10; // Random value from 10 to 20
 	while (getTile(v1,v2) != '.') {
@@ -122,10 +124,8 @@ void Level::randomizeEnemy() {
 		v2 = rand() % 10 + 10; // Random value from 10 to 20
 	}
 
-	//Enemy randomEnemy(randomHealth, randomAttackDamage, randomDexterity, v1, v2);      // Please help fix syntax 
-	//_enemyList.push_back(randomEnemy);                                                // Please help fix syntax
+	
 }
-
 void Level::randomizeItem() {
 	int v1 = rand() % 10 + 10; // Random value from 10 to 20
 	int v2 = rand() % 10 + 10; // Random value from 10 to 20
@@ -134,14 +134,12 @@ void Level::randomizeItem() {
 		v2 = rand() % 10 + 10; // Random value from 10 to 20
 	}
 
-	int randomDefense = rand() % 2 + 1; // Random value from 2 to 3
-	//Item randomItem("", randomDefense, v1, v2);                            // Please help fix syntax
-	//_itemList.push_back(randomItem);                                      // Please help fix syntax
+
+
 }
 
 // Enemy Functions
 
 void drawEnemies() {
 
-	// Hopefully this can be used to ensure that the enemies aren't drawn over by over functions
 }
